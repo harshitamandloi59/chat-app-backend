@@ -1,5 +1,4 @@
-// import mongoose from "mongoose";
-// import bcrypt from "bcryptjs";
+
 const mongoose=require('mongoose')
 const bcrypt=require('bcryptjs')
 const userSchema = new mongoose.Schema(
@@ -13,6 +12,10 @@ const userSchema = new mongoose.Schema(
 
     isOnline: { type: Boolean, default: false },
     lastSeen: { type: Date },
+    profilePic: {
+      type: String,
+      default: "",
+    },
   },
   { timestamps: true }
 );

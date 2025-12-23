@@ -16,6 +16,8 @@ const messageSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Chat",
     },
+    file: { type: String }, // 🔥 file path
+    fileType: { type: String }, // image / file
     seenBy: [
       {
         type: mongoose.Schema.Types.ObjectId,
